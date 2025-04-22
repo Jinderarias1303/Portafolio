@@ -7,13 +7,17 @@
     <title>Inicio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./JS/MenuHamburguesa.js" defer></script>
+    <script src="./JS/slider.js" defer></script>
 </head>
 
-<body>
+<body class="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#00BFFF] text-white">
+
+    <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
     <!--  navegacion -->
     <nav class="bg-gradient-to-r from-blue-700 to-blue-900 shadow-md">
         <div class="p-4 flex justify-between items-center">
-            <div class="text-white font-bold text-xl">Portafolio Jinder</div>
+            <div id="inicio" class="text-white font-bold text-xl">Portafolio Jinder</div>
 
             <div class="lg:hidden">
                 <button id="menu-toggle" class="text-white focus:outline-none focus:ring-2 focus:ring-yellow-500">
@@ -21,50 +25,133 @@
                 </button>
             </div>
             <ul class="hidden lg:flex space-x-4 text-white">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Sobre mí</a></li>
-                <li><a href="projects.html">Proyectos</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobreMi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contactos">Contacto</a></li>
             </ul>
         </div>
         <ul id="mobile-menu" class="hidden lg:hidden flex-col text-white space-y-2 px-4 pb-4">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="about.html">Sobre mí</a></li>
-            <li><a href="projects.html">Proyectos</a></li>
-            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobreMi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contactos">Contacto</a></li>
         </ul>
     </nav>
-
-    <div class="bg-zinc-900 min-h-screen flex items-star justify-end px-6 py-12 text-white">
+    <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- tarjeta sobre mi -->
+    <div class="flex items-star justify-end px-6 py-12 text-white">
         <div class="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-6xl w-full">
-
-            <!-- Imagen fuera de la tarjeta -->
             <div class="flex-shrink-0 ">
-                <img src="img/harqqho8mn9a1.jpg" alt="Jinder"
-                    class="w-60 h-60 rounded-xl border-4 border-emerald-500 shadow-lg object-cover   w-full h-auto    " />
+                <img src="./img/foto.jpg" alt="Jinder"
+                    class="w-40 h-40 md:w-60 md:h-60 object-cover rounded-xl border-4 border-emerald-500 shadow-lg" />
             </div>
-
             <!-- Tarjeta de información -->
-            <div class="bg-zinc-800 border border-zinc-700 rounded-2xl p-8 shadow-lg w-full">
+            <div id="sobreMi" class=" border border-zinc-700 rounded-2xl p-8 shadow-lg w-full">
                 <h1 class="text-4xl md:text-7xl font-bold mb-4">Hola, soy Jinder</h1>
                 <h2 class="text-4xl text-emerald-400 font-semibold mb-6">Desarrollador Backend</h2>
                 <p class="text-2xl text-zinc-300 leading-relaxed mb-6">
                     ¿Qué hago como desarrollador backend? <br><br>
-                    Creo y mantengo bases de datos, sistemas de gestión de datos y me encargo de la lógica de negocio de las aplicaciones. Además, desarrollo APIs para la comunicación entre frontend y backend.<br>
-                    Trabajo con lenguajes como Python, Java y JavaScript. También puedo crear sitios web con HTML, CSS y JavaScript, usando frameworks como Tailwind y Bulma.
+                    Creo y mantengo bases de datos, sistemas de gestión de datos y me encargo de la lógica de negocio de
+                    las aplicaciones. Además, desarrollo APIs para la comunicación entre frontend y backend.<br>
+                    Trabajo con lenguajes como Python, Java y JavaScript. También puedo crear sitios web con HTML, CSS y
+                    JavaScript, implemantando frameworks como Tailwind y Bulma.
                 </p>
             </div>
-            <!-- <div class="flex flex-wrap gap-2">
-                <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-full text-sm">Python</span>
-                <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-full text-sm">Java</span>
-                <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-full text-sm">Tailwind</span>
-                <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-full text-sm">MySQL</span>
-                <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-full text-sm">Git</span>
-            </div> -->
-
         </div>
     </div>
+    <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- max-w-5xl -->
+    <section id="proyectos" class="relative w-full mx-auto py-40 px-4">
+        <h2  class="text-4xl font-bold text-center text-white mb-8">Proyectos.</h2>
+
+        <div class="flex flex-wrap justify-center gap-8">
+            <!-- Proyecto 1 -->
+            <div
+                class="w-full md:w-[48%] bg-zinc-900 text-white rounded-xl shadow-lg overflow-hidden border border-zinc-700">
+                <div class="relative overflow-hidden h-64">
+                    <div class="slider-proyecto flex transition-transform duration-500 ease-in-out h-full h-80">
+                        <img src="./img/matrimonio1.png" class="min-w-full object-cover h-full" />
+                        <img src="./img/matrimonio2.png" class="min-w-full object-cover h-full" />
+                        <img src="./img/matrimonio3.png" class="min-w-full object-cover h-full" />
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-3xl font-bold text-emerald-400 mb-4">Sitio Web estudio fotografico para Matrimonios</h3>
+                    <p class="text-zinc-300 text-lg">
+                        se planteaba la necesidad de crear una sitio web para un matrimonio, donde se pudieran mostrar los Trabajos realizados por el fotografo, y que los usuarios pudieran ver las fotos de la boda. <br><br>
+                    El sitio web fue desarrollado utilizando HTML, CSS, BULMA y se implementó un diseño responsivo para garantizar una experiencia de usuario óptima en dispositivos móviles y de escritorio. <br><br>
+                    El sitio web cuenta con una galería de fotos, donde los usuarios pueden ver las imágenes de la boda y un formulario de contacto para que los interesados puedan comunicarse con el fotógrafo. <br><br>
+
+                    </p>
+                </div>
+                <a href="https://github.com/Jinderarias1303/Hotel-P-JavaScript" target="_blank"
+                    class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-xl shadow-lg transition-all duration-300 gap-2 justify-center items-center flex">
+                    Ver en GitHub
+                </a>
+
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div
+                class="w-full md:w-[48%] bg-zinc-900 text-white rounded-xl shadow-lg overflow-hidden border border-zinc-700">
+                <div class="relative overflow-hidden h-64">
+                    <div class="slider-proyecto flex transition-transform duration-500 ease-in-out h-full">
+                        <img src="./img/hotel1.png" class="min-w-full object-cover h-full" />
+                        <img src="./img/hotel2.png" class="min-w-full object-cover h-full" />
+                        <img src="./img/hotel3.png" class="min-w-full object-cover h-full" />
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-3xl font-bold text-emerald-400 mb-4">Otro Proyecto</h3>
+                    <p class="text-zinc-300 text-lg">
+                        Descripción corta del segundo proyecto.
+                    </p>
+                </div>
+                <a href="https://github.com/Jinderarias1303/Hotel-P-JavaScript" target="_blank"
+                    class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-xl shadow-lg transition-all duration-300 gap-2 justify-center items-center flex">
+                    Ver en GitHub
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- tarjetas con mis habilidades -->
+    <div class="  flex items-star justify-center px-6 py-6 text-white">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-6xl w-full">
+
+            <!-- Tarjeta de información -->
+            <div id="sobreMi" class=" border border-zinc-700 rounded-2xl p-8 shadow-lg w-full">
+                <h1 class="text-4xl md:text-7xl font-bold mb-4">Habilidades Técnicas</h1>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Python</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Java</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">JavaScript</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Tailwind</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">MySQL</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Git</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">GitHub</span>
+                </div>
+            </div>
+            <!-- Tarjeta de información -->
+            <div id="sobreMi" class=" border border-zinc-700 rounded-2xl p-8 shadow-lg w-full">
+                <h1 class="text-4xl md:text-7xl font-bold mb-4">Habilidades Socioemocionales</h1>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Trabajo en equipo</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Solucion de
+                        conflictos</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Creatividad</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Responsabilidad</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Gestion del tiempo</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Adaptabilidad</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Liderasgo</span>
+                    <span class="bg-zinc-700 text-emerald-400 px-3 py-1 rounded-lg text-sm">Escucha activa </span>
+                </div>
+            </div>
+        </div>
 
 </body>
 
